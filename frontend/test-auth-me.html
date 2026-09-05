@@ -12,6 +12,8 @@
   <pre id="result" style="background:#f5f5f5;padding:10px;margin-top:10px"></pre>
 
   <script>
+    const API_BASE_URL = 'http://127.0.0.1:8000'
+
     async function testAuthMe() {
       const token = document.getElementById('token').value
       if (!token) {
@@ -20,7 +22,7 @@
       }
 
       try {
-        const res = await fetch('http://127.0.0.1:8000/api/auth/me', {
+        const res = await fetch(`${API_BASE_URL}/api/auth/me`, {
           headers: { 'Authorization': 'Bearer ' + token }
         })
         const data = await res.json()

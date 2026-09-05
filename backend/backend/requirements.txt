@@ -1,0 +1,35 @@
+# Unified backend dependencies for Python 3.11.
+# Install from backend/: python -m pip install -r requirements.txt
+# If TensorFlow was already installed incorrectly, reinstall with:
+# python -m pip install --no-cache-dir --force-reinstall -r requirements.txt
+
+# Web API
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+python-multipart>=0.0.9,<1.0
+pydantic>=2.7,<3.0
+python-jose[cryptography]>=3.3,<4.0
+setuptools>=70,<81
+
+# Database
+sqlalchemy>=2.0,<3.0
+
+# Import/export
+pandas>=2.2,<3.0
+openpyxl>=3.1,<4.0
+xlrd>=2.0,<3.0
+
+# Face recognition and emotion analysis.
+# The TensorFlow/Keras stack is pinned because DeepFace/RetinaFace are sensitive
+# to Keras major-version changes.
+numpy>=1.26,<2.0
+opencv-python>=4.8,<5.0
+pillow>=10.0,<12.0
+tensorflow==2.15.1
+tensorflow-intel==2.15.1; platform_system == "Windows"
+keras==2.15.0
+tf-keras==2.15.1
+deepface==0.0.100
+retina-face==0.0.17
+mtcnn==0.1.1
+gdown>=4.7,<6.0

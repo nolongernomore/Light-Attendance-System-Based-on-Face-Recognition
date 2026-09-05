@@ -1,0 +1,4 @@
+# Compatibility file.
+# The project now keeps one dependency source of truth at backend/requirements.txt.
+-r ../../requirements.txt
+

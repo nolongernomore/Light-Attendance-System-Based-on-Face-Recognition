@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+attendance.db
+uploads/*
+!uploads/.gitkeep
+!uploads/enroll/
+!uploads/checkin/
+!uploads/faces/
+!uploads/group_photos/
+!uploads/results/
+!uploads/exports/
+

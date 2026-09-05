@@ -20,7 +20,7 @@
       }
 
       try {
-        const res = await fetch('http://26.6.49.51:8000/api/auth/me', {
+        const res = await fetch('http://127.0.0.1:8000/api/auth/me', {
           headers: { 'Authorization': 'Bearer ' + token }
         })
         const data = await res.json()
